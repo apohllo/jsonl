@@ -10,7 +10,7 @@ class JSONL
 
   def self.open(filename, mode="r", **options)
     begin
-      f = File.open(filename, mode, options)
+      f = File.open(filename, mode, **options)
       jsonl = new(f)
     rescue Exception
       f.close
